@@ -2,37 +2,12 @@ body {
     background-color:black;
 }
 
-.header {
-    background-image: url(prius.jpg);
-    background-repeat: no-repeat;
-    background-position: 0px;
-    width: 1400px;
-    height: 600px;
-}
-
 h1 {
-
     background-color: crimson;
     color: white;
     padding-left: 30px;
-    width: 1200px;
-}
-
-.gm_message {
-    left: 50px;
-}
-
-span {
-    color: rgb(238, 134, 134);
-    font-weight: bold;
-}
-
-h2 {
-    background-color: crimson;
-    color: white;
-    font-weight: bold;
-    padding-left: 30px;
-    width: 1200px;
+    width: 500px;
+    margin: 0;
 }
 
 .slide {
@@ -48,7 +23,6 @@ h2 {
     height: 70%;
     top: 0;
     left: 0;
-
     opacity: 0;
     animation: slideshow 32s linear infinite;
 }
@@ -83,28 +57,98 @@ h2 {
     }
 }
 
-.middle_element2 {
+.gm_message1 {
     position: absolute;
-    top: 570px;
-    left: 0;
+    top: 680px;
+    color: white;
+    left: 50px;
+    font-size: large;
+}
+
+.gm_message2 {
+    position: absolute;
+    top: 710px;
+    color: white;
+    left: 100px;
+    font-size: large;
+}
+
+span {
+    color: rgb(238, 134, 134);
+    font-weight: bold;
 }
 
 #lightgallery_images {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     position: absolute;
-    top: 1450px;
+    top: 800px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 #lightgallery_images a {
     text-decoration: none;
-    flex: 1 1 500px;
+    flex: 1 1 200px;
     margin: 0;
     padding: 0;
 }
 
 #lightgallery_images img {
     width: 100%;
+}
+
+.myCarCheck {
+    position: absolute;
+    top: 1150px;
+    align-items: center;
+    color: red;
+    font-size: x-large;
+}
+
+h2 {
+    color: pink;
+}
+
+p {
+    color: white;
+    font-size: large;
+    margin: 20px;
+}
+
+.check {
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    font-size: large;
+}
+
+.check2 {
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    font-size: large;
+}
+
+.check3 {
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    font-size: large;
+}
+
+.blink {
+    -webkit-animation: blink 1s ease infinite;
+    animation: blink 1s ease infinite;
+    color: yellow;
+}
+
+@-webkit-keyframes blink {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes blink {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }
