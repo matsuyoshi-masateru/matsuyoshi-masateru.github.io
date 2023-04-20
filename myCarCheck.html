@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a href="index.html">前ページ</a>
+    <h2>あなたのライフスタイルにぴったりのクルマを分析します</h2>
+    <div class="carCheck">
+      <p id="firstCheck">旅行が好きだ</p>
+      <input class="check" type="button" value="Yes!" onclick="secondCheck('Yes')">
+      <input class="check" type="button" value="No!" onclick="secondCheck('No')">
+      <p id="secondCheck">【設問２】</p>
+      <input class="check2" type="button" value="Yes!" onclick="thirdCheck('Yes')">
+      <input class="check2" type="button" value="No!" onclick="thirdCheck('No')">
+      <p id="thirdCheck">【設問３】</p>
+      <input class="check3" type="button" value="Yes!" onclick="imageDisplay()">
+      <input class="check3" type="button" value="No!" onclick="imageDisplay()">
+    </div>
+    <h2 class="blink">あなたにぴったりの車は...↓↓↓</h2>
+    <img id="imagePrius" src="" alt="">
+    <input type="button" value="もう一度" onclick="imageHidden()">
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
