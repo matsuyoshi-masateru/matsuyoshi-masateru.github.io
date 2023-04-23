@@ -44,3 +44,63 @@ function imageHidden() {
     secondCheck.textContent = "【設問２】";
     thirdCheck.textContent = "【設問３】";
 }
+
+let num = 0;
+
+function gameTagamin(num) {
+    const array = [];
+    let result = "";
+    document.getElementById("answerImage").style.display = "none";
+    document.getElementById("answer").value = "";
+    for (let i = 0;i < num; i++) {
+        array.push(Math.floor(Math.random() * 5));
+    }
+    for (const val of array) {
+        switch (val) {
+            case 0:
+                result += "😊";
+                break;
+            case 1:
+                result += "😃";
+                break;
+            case 2:
+                result += "👽";
+                break;
+            case 3:
+                result += "👾";
+                break;
+            case 4:
+                result += "🤖";
+                break;
+            case 5:
+                result += "😎";
+                break;
+        };
+    };
+    let element = document.getElementsByClassName("gameTagaminStart")[0];
+    return element.innerHTML = result;
+}
+
+function answer() {
+    const ans = document.getElementsByClassName("gameTagaminStart")[0].innerHTML
+    console.log(ans);
+    const answerText = document.getElementById("answer").value
+    console.log(answerText);
+    const image = document.getElementById("answerImage");
+    let num = 0;
+    const ansArray = ans.split("");
+    console.log(ansArray);
+    for (const val of ansArray) {
+        console.log(ansArray[val]);
+        if (val === "\uDC7D") {
+            num += 1;
+        }
+    }
+    if (Number(answerText) === num) {
+        image.style.display = "";
+        image.src = "seikai.png";
+    } else {
+        image.style.display = "";
+        image.src = "huseikai.png";
+    }
+}
