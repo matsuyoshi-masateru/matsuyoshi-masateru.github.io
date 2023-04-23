@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>タガミンを探せ</title>
+</head>
+<body>
+    <a href="index.html">前ページ</a>
+    <h2>♪👽タガミンを探せ👽♪</h2>
+    <p class="explanation">タガミン（👽）が何人いるか当ててください</p>
+    <input class="btnTagamin" type="button" value="初級" onclick="gameTagamin(10)">
+    <input class="btnTagamin" type="button" value="中級" onclick="gameTagamin(30)">
+    <input class="btnTagamin" type="button" value="上級" onclick="gameTagamin(50)">
+    <input class="btnTagamin" type="button" value="超級" onclick="gameTagamin(100)">
+    <div class="gameTagaminStart"></div>
+    <label>答え：</label><input id="answer" class="btnTagamin" type="text">
+    <input class="btnTagamin" type="button" value="push!" onclick="answer()">
+    <img id="answerImage" src="" alt="answer-image">
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
