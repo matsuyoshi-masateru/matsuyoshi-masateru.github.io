@@ -33,7 +33,20 @@ function thirdCheck(thirdCheckAnser) {
 
 function imageDisplay() {
     let img = document.getElementById("imagePrius");
-    img.src="prius.JPG";
+    let randomImage = Math.floor(Math.random() * 3);
+    console.log(randomImage);
+    switch (randomImage) {
+        case 0:
+            img.src="prius.JPG";
+            break;
+        case 1:
+            img.src="prius_red.jpg";
+            break;
+        case 2:
+            img.src="prius_yellow.jpg";
+            break;    
+    }
+
 }
 
 function imageHidden() {
