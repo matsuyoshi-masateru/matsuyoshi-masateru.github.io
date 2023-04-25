@@ -1,12 +1,13 @@
 body {
     background-color:black;
+    color: white;
+    font-size: large;
 }
 
 h1 {
     background-color: crimson;
-    color: white;
     padding-left: 30px;
-    width: 500px;
+    width: 600px;
     margin: 0;
 }
 
@@ -60,17 +61,13 @@ h1 {
 .gm_message1 {
     position: absolute;
     top: 680px;
-    color: white;
     left: 50px;
-    font-size: large;
 }
 
 .gm_message2 {
     position: absolute;
     top: 710px;
-    color: white;
     left: 100px;
-    font-size: large;
 }
 
 span {
@@ -115,36 +112,32 @@ span {
     font-size: x-large;
 }
 
-h2 {
-    color: pink;
-}
-
-p {
-    color: white;
-    font-size: large;
-    margin: 20px;
-}
-
 .check {
     width: 100px;
     height: 50px;
     margin: 10px;
-    font-size: large;
 }
 
 .check2 {
     width: 100px;
     height: 50px;
     margin: 10px;
-    font-size: large;
 }
 
 .check3 {
     width: 100px;
     height: 50px;
     margin: 10px;
-    font-size: large;
 }
+
+h2 {
+    color: pink;
+}
+
+p {
+    margin: 20px;
+}
+
 
 #imagePrius {
     width: 1000px;
@@ -168,7 +161,7 @@ p {
 
 .gameTagaminStart {
     font-size: 200%;
-    width: 480px;
+    width: 500px;
     background-color: lightcyan;
 }
 
@@ -177,13 +170,4 @@ p {
     top: 100px;
     width: 200px;
     height: auto;
-}
-
-.btnTagamin {
-    font-size: large;
-}
-
-label {
-    color: white;
-    font-size: large;
 }
