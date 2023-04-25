@@ -1,41 +1,47 @@
 'use strict'
 // 1行目に記載している 'use strict' は削除しないでください
+const secondQuestion = document.getElementById("secondCheck");
+const thirdQuestion = document.getElementById("thirdCheck");
+const img = document.getElementById("imagePrius");
 
-function secondCheck(secondCheckAnser) {
+function firstCheck(firstCheckAnser) {
     let ans = "";
-    let nextQuestion = document.getElementById("secondCheck");
-    if (secondCheckAnser === "Yes") {
+    if (firstCheckAnser === "Yes") {
         ans = "クルマを自分好みにカスタムしたい";
-        console.log(ans);
     } else {
         ans = "使い勝手の良い車がいい"
     }
-    return nextQuestion.textContent = ans;
+    return secondQuestion.textContent = ans;
 }
 
-function thirdCheck(thirdCheckAnser) {
+// test(firstCheck("Yes"),"クルマを自分好みにカスタムしたい");
+// test(firstCheck("No"),"使い勝手の良い車がいい");
+
+function secondCheck(secondCheckAnser) {
     let ans = "";
-    let firstAnser = document.getElementById("secondCheck").textContent;
-    let nextQuestion = document.getElementById("thirdCheck");
-    console.log("firstAnser:",firstAnser);
-    console.log("nextQuestion", nextQuestion);
-    if (thirdCheckAnser === "Yes" && firstAnser === "クルマを自分好みにカスタムしたい") {
+    if (secondCheckAnser === "Yes" && secondQuestion.textContent === "クルマを自分好みにカスタムしたい") {
         ans = "流行に敏感である";
-    } else if (thirdCheckAnser === "Yes" && firstAnser === "使い勝手の良い車がいい") {
+    } else if (secondCheckAnser === "Yes" && secondQuestion.textContent === "使い勝手の良い車がいい") {
         ans = "ショッピングが好きだ"
-    } else if (thirdCheckAnser === "No" && firstAnser === "クルマを自分好みにカスタムしたい") {
+    } else if (secondCheckAnser === "No" && secondQuestion.textContent === "クルマを自分好みにカスタムしたい") {
         ans = "街乗りに便利な車がいい";
     }else {
         ans = "車は少しくらいクセがある方が面白い";
     }
-    return nextQuestion.textContent = ans;
+    return thirdQuestion.textContent = ans;
 }
 
+// secondQuestion.textContent = "クルマを自分好みにカスタムしたい";
+// test(secondCheck("Yes"),"流行に敏感である");
+// test(secondCheck("No"),"街乗りに便利な車がいい");
+// secondQuestion.textContent = "使い勝手の良い車がいい";
+// test(secondCheck("Yes"),"ショッピングが好きだ");
+// test(secondCheck("No"),"車は少しくらいクセがある方が面白い");
+
 function imageDisplay() {
-    let img = document.getElementById("imagePrius");
     let randomImage = Math.floor(Math.random() * 3);
     console.log(randomImage);
-    switch (randomImage) {
+    switch ("randomImage:", randomImage) {
         case 0:
             img.src="prius.JPG";
             break;
@@ -46,25 +52,25 @@ function imageDisplay() {
             img.src="prius_yellow.jpg";
             break;    
     }
-
 }
 
 function imageHidden() {
-    let img = document.getElementById("imagePrius");
-    const secondCheck = document.getElementById("secondCheck");
-    const thirdCheck = document.getElementById("thirdCheck");
     img.src="";
-    secondCheck.textContent = "【設問２】";
-    thirdCheck.textContent = "【設問３】";
+    secondQuestion.textContent = "【設問２】";
+    thirdQuestion.textContent = "【設問３】";
+    console.log("secondQuestion.textContent:", secondQuestion.textContent);
+    console.log("thirdQuestion.textContent:", thirdQuestion.textContent);
 }
 
-let num = 0;
+const image = document.getElementById("answerImage");
+const answer = document.getElementById("answer");
+const element = document.getElementsByClassName("gameTagaminStart")[0];
 
 function gameTagamin(num) {
     const array = [];
     let result = "";
-    document.getElementById("answerImage").style.display = "none";
-    document.getElementById("answer").value = "";
+    image.style.display = "none";
+    answer.value = "";
     for (let i = 0;i < num; i++) {
         array.push(Math.floor(Math.random() * 5));
     }
@@ -90,30 +96,25 @@ function gameTagamin(num) {
                 break;
         };
     };
-    let element = document.getElementsByClassName("gameTagaminStart")[0];
+    console.log(result);
     return element.innerHTML = result;
 }
 
-function answer() {
-    const ans = document.getElementsByClassName("gameTagaminStart")[0].innerHTML
-    console.log(ans);
-    const answerText = document.getElementById("answer").value
-    console.log(answerText);
-    const image = document.getElementById("answerImage");
+function answerCheck() {
     let num = 0;
-    const ansArray = ans.split("");
-    console.log(ansArray);
+    const ansArray = element.innerHTML.split("");
     for (const val of ansArray) {
-        console.log(ansArray[val]);
         if (val === "\uDC7D") {
             num += 1;
         }
     }
-    if (Number(answerText) === num) {
+    if (Number(answer.value) === num) {
         image.style.display = "";
         image.src = "seikai.png";
     } else {
         image.style.display = "";
         image.src = "huseikai.png";
     }
+    console.log("タガミンの数:", num);
+    console.log("入力された数:", Number(answer.value));
 }
