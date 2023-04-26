@@ -125,3 +125,8 @@ function resetTagamin() {
     answer.value = "";
     console.log("reset element.innerHTML:", element.innerHTML);
 }
+
+function retry() {
+    image.style.display = "none";
+    answer.value = "";
+}
