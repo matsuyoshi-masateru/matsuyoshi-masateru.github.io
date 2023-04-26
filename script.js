@@ -120,10 +120,9 @@ function answerCheck() {
 }
 
 function resetTagamin() {
-    image.style.display = "none";
     element.innerHTML = "";
-    answer.value = "";
     console.log("reset element.innerHTML:", element.innerHTML);
+    return retry();
 }
 
 function retry() {
