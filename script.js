@@ -94,9 +94,9 @@ function gameTagamin(num) {
             case 5:
                 result += "😎";
                 break;
-        };
-    };
-    console.log(result);
+        }
+    }
+    console.log("game-start element.innerHTML:", result);
     return element.innerHTML = result;
 }
 
@@ -117,4 +117,10 @@ function answerCheck() {
     }
     console.log("タガミンの数:", num);
     console.log("入力された数:", Number(answer.value));
+}
+
+function resetTagamin() {
+    image.style.display = "none";
+    element.innerHTML = "";
+    console.log("reset element.innerHTML:", element.innerHTML);
 }
